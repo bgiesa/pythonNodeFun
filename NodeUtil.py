@@ -19,8 +19,12 @@ def correctPosition(position, direction):
     return position
 
 def shiftNode(node, oldnode):
-    
-    return node
+    x = node.x - oldnode.x
+    y = node.y - oldnode.y
+    print(node.__str__())
+    print(oldnode.__str__())
+    print('x: {} | y: {}'.format(str(x), str(y)))
+    # return node
 
 def testDirection(nodes, pos):
     for item in nodes:

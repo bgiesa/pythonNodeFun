@@ -9,6 +9,7 @@ class NetNode:
     def setPos(self, x, y):
         self.x = x
         self.y = y
+        
     def addConnector(self, node):
         self.connected.append(node)
 

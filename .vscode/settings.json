@@ -6,6 +6,8 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/__pycache__":true,
-        "**/venv":true
+        "**/venv":true,
+        "**/*.md":true,
+        "**/*.pyc":true
     }
 }
