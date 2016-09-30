@@ -22,8 +22,7 @@ class SystemMap:
         start_time = time.time()
         nodeCount = self.nodeCount
         nodes = []
-        lastNode = None
-        cpuConnection = 0        
+        lastNode = None                
 
         for i in range(0, nodeCount):
             if(i == 0):
@@ -85,15 +84,17 @@ class SystemMap:
         nodeCount = self.nodeCount
         nodes = []
         lastNode = None
-        for i in range(0, nodeCount):
-            if(i == 0):
+        cpuConnection = 0
+
+        for i in range(0, nodeCount):            
+            if(i == 0):                                    
                 nodeN = NetNode("CPU")
                 nodeN.setChar('C')
                 nodeN.setPos(0, 0)
                 nodes.append(nodeN)
                 lastNode = nodeN
 
-            else:
+            else:                                    
                 if(i == (nodeCount - 1)):
                     nodeN = NetNode("CONNECT")
                     nodeN.setChar('I')
@@ -101,7 +102,7 @@ class SystemMap:
                     if not nodeN in lastNode.connected:
                         lastNode.addConnector(nodeN)
                 
-                else:
+                else:                    
                     nodeN = NetNode("NODE")
                     nodeN.setChar('N')
                     nodeN.addConnector(lastNode)

@@ -10,10 +10,10 @@ def getConnection(sysMap):
 def test():
     start_time = time.time()
     for i in range(0,1):
-        sysMap = SystemMap("Test "+str(i), 2, 1)
-
+        sysMap = SystemMap("Test "+str(i), 10, 1)
+        getConnection(sysMap)
         print(sysMap.__str__())
-        # sysMap.printMap()
+        #sysMap.printMap()
 
     elapsed_time = time.time() - start_time
     print('EXEC TIME: {:06.4f} sec'.format(elapsed_time))
